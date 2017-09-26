@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/hamiltoncw/workspace/gigswap/gigswap-api/app/api/users'
-let g:netrw_dirhist_2='/Users/hamiltoncw/workspace/gigswap/gigswap-client/src'
-let g:netrw_dirhist_3='/Users/hamiltoncw/workspace/gigswap/gigswap-client/src/store'
-let g:netrw_dirhist_4='/Users/hamiltoncw/workspace/gigswap/gigswap-client/src/store/modules'
-let g:netrw_dirhist_5='/Users/hamiltoncw/workspace/gigswap/gigswap-client/src'
-let g:netrw_dirhist_6='/Users/hamiltoncw/.vim'
