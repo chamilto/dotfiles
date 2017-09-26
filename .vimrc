@@ -26,6 +26,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'pangloss/vim-javascript'
 Plug 'Yggdroot/indentLine'
+Plug 'posva/vim-vue'
 call plug#end()
 ""Settings I like taken from SPF13
 map <leader>e :NERDTreeFind<CR>
@@ -33,7 +34,7 @@ nmap <leader>nt :NERDTreeFind<CR>
  
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-let NERDTreeChDirMode=0
+let NERDTreeChDirMode=1
 let NERDTreeQuitOnOpen=0
 let NERDTreeMouseMode=2
 let NERDTreeShowHidden=1
@@ -49,3 +50,11 @@ syntax enable
 let python_highlight_all=1  
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
 \ formatoptions=croq softtabstop=4 textwidth=74 comments=:#\:,:#
+" javascript
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
+\ formatoptions=croq softtabstop=4 textwidth=74
+" control p
+let g:ctrlp_custom_ignore = {
+\ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules)$',
+ \ }
+
