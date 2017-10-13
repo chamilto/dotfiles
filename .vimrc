@@ -1,6 +1,5 @@
 set backspace=indent,eol,start
 set number              " Show line numbers
-set linebreak           " Break lines at word (requires Wrap lines)
 set showbreak=+++       " Wrap-broken line prefix
 set textwidth=100       " Line wrap (number of cols)
 set showmatch           " Highlight matching brace
@@ -12,26 +11,30 @@ set laststatus=2
 set showcmd
 set listchars=precedes:·
 set list
-set t_Co=256
-set background=dark
+set completeopt-=preview
 highlight Normal ctermfg=grey ctermbg=black
-colorscheme delek
 let mapleader = ','
 " vim plug
 call plug#begin('~/.vim/plugged')
-Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'davidhalter/jedi-vim'
 Plug 'mitsuhiko/vim-python-combined'
-Plug 'pangloss/vim-javascript'
 Plug 'Yggdroot/indentLine'
+Plug 'isRuslan/vim-es6'
 Plug 'posva/vim-vue'
+Plug 'jiangmiao/auto-pairs'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'w0rp/skasdale'
 call plug#end()
 ""Settings I like taken from SPF13
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
- 
+map i <Up>
+map j <Left>
+map k <Down>
+noremap h i
+inoremap kk <Esc>
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeChDirMode=1
@@ -53,8 +56,13 @@ autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
 " javascript
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
 \ formatoptions=croq softtabstop=4 textwidth=74
+" vue
+autocmd FileType vue setlocal expandtab shiftwidth=2 tabstop=2
+\ formatoptions=croq softtabstop=4 textwidth=74
 " control p
+"
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules)$',
  \ }
 
+colorscheme neodark
