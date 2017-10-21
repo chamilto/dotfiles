@@ -30,11 +30,6 @@ call plug#end()
 ""Settings I like taken from SPF13
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
-map i <Up>
-map j <Left>
-map k <Down>
-noremap h i
-inoremap kk <Esc>
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 let NERDTreeChDirMode=1
