@@ -25,7 +25,7 @@ Plug 'isRuslan/vim-es6'
 Plug 'posva/vim-vue'
 Plug 'jiangmiao/auto-pairs'
 Plug 'KeitaNakamura/neodark.vim'
-Plug 'w0rp/skasdale'
+Plug 'w0rp/ale'
 call plug#end()
 ""Settings I like taken from SPF13
 map <leader>e :NERDTreeFind<CR>
