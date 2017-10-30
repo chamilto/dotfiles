@@ -1,0 +1,22 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Flat_Dark (SL).tmTheme",
+	"draw_white_space": "all",
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_numbers": true,
+	"rulers":
+	[
+		120
+	],
+	"scroll_past_end": true,
+	"scroll_speed": 1.5,
+	"show_full_path": true,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false,
+	"vintage_lines.force_mode": true
+}
