@@ -19,6 +19,7 @@ set clipboard=unnamed " copy to macosx clipboard
 set noshowmode
 highlight Normal ctermfg=grey ctermbg=black
 let mapleader = ','
+
 " vim plug
 call plug#begin('~/.vim/plugged')
 Plug 'flazz/vim-colorschemes'
@@ -36,7 +37,10 @@ Plug 'nightsense/simplifysimplify'
 Plug 'rizzatti/dash.vim'
 Plug 'christoomey/vim-system-copy'
 Plug 'itchyny/lightline.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
+
+" nerd tree
 ""Settings I like taken from SPF13
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
@@ -47,7 +51,7 @@ let g:lightline = {
       \ }
 
 let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '__pycache__']
 let NERDTreeChDirMode=1
 let NERDTreeQuitOnOpen=0
 let NERDTreeMouseMode=2
@@ -58,6 +62,8 @@ let g:indentLine_conceallevel=1
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_char = '·'
+
+
 " syntax
 syntax enable
 " python
@@ -71,6 +77,8 @@ autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
 " vue
 autocmd FileType vue setlocal expandtab shiftwidth=2 tabstop=2
 \ formatoptions=croq softtabstop=4 textwidth=74
+
+
 " control p
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v[\/](\.git|\.hg|\.svn|_site|node_modules)$',
@@ -79,4 +87,7 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.vue :%s/\s\+$//e
 
-colorscheme neodark
+colorscheme palenight
+ "hi Normal     ctermbg=NONE guibg=NONE
+ hi LineNr     ctermbg=NONE guibg=NONE
+ hi SignColumn ctermbg=NONE guibg=NONE
