@@ -37,8 +37,16 @@ Plug 'nightsense/simplifysimplify'
 Plug 'rizzatti/dash.vim'
 Plug 'christoomey/vim-system-copy'
 Plug 'itchyny/lightline.vim'
+Plug 'HenryNewcomer/vim-theme-papaya'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'wolf-dog/nighted.vim'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'ervandew/supertab'
 call plug#end()
+
+" supertab
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+
 
 " nerd tree
 ""Settings I like taken from SPF13
@@ -88,6 +96,12 @@ autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.vue :%s/\s\+$//e
 
 colorscheme palenight
- "hi Normal     ctermbg=NONE guibg=NONE
+ hi Normal     ctermbg=NONE guibg=NONE
  hi LineNr     ctermbg=NONE guibg=NONE
  hi SignColumn ctermbg=NONE guibg=NONE
+
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
