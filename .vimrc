@@ -1,8 +1,6 @@
 "===========
 " GENERAL
 "===========
-"
-highlight Normal ctermfg=grey ctermbg=black
 let mapleader = ','
 set backspace=indent,eol,start
 set number              " Show line numbers
@@ -118,12 +116,9 @@ let g:indentLine_fileTypeExclude = ["nerdtree"]
 "===========
 " SYNTAX
 "===========
-
 " coc cmds:
 " :CocInstall coc-python
 syntax enable
-" psql
-let g:psql_type_default = 'pgsql'
 \ formatoptions=croq softtabstop=4 textwidth=74 comments=:#\:,:#
 " javascript
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
@@ -139,16 +134,16 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.vue :%s/\s\+$//e
 
-hi Normal     ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE guibg=NONE
-hi SignColumn ctermbg=NONE guibg=NONE
-
-" Python debug command
-command bp :normal i breakpoint()<ESC>
-
-
 "===========
 " Python-Black
 "===========
 let g:black_linelength = 120
 autocmd BufWritePre *.py execute ':Black'
+
+"===========
+" Colors
+"===========
+"highlight Normal ctermfg=grey ctermbg=black
+"hi Normal     ctermbg=NONE guibg=NONE
+"hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
