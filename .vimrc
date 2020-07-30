@@ -42,6 +42,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'christoomey/vim-system-copy'
 Plug 'itchyny/lightline.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'psf/black', { 'tag': '19.10b0' }
@@ -57,6 +58,7 @@ set nowritebackup
 set signcolumn=yes
 set hidden
 set updatetime=300
+set statusline^=%{coc#status()}
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -143,7 +145,25 @@ autocmd BufWritePre *.py execute ':Black'
 "===========
 " Colors
 "===========
+colorscheme nord
 "highlight Normal ctermfg=grey ctermbg=black
 "hi Normal     ctermbg=NONE guibg=NONE
 "hi LineNr     ctermbg=NONE guibg=NONE
 hi SignColumn ctermbg=NONE guibg=NONE
+
+"===========
+" Light Line
+"===========
+let g:lightline = {
+\ 'colorscheme': 'wombat',
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'component_function': {
+\   'cocstatus': 'coc#status'
+\ },
+\ }
+
+" Use auocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
